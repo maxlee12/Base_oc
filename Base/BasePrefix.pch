@@ -1,0 +1,41 @@
+//
+//  GLinkPrefix.pch
+//  GLink
+//
+//  Created by lawrence on 16/9/23.
+//  Copyright © 2016年 lawrence. All rights reserved.
+//
+
+#ifndef GLinkPrefix_pch
+#define GLinkPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "Header.h"
+#import "AppMacro.h"
+#import "NotificationMacro.h"
+#import "UtilsMacro.h"
+#import "VendorMacro.h"
+
+/*调试log*/
+
+#define DEBUG_MODE
+
+#ifdef DEBUG_MODE
+
+#ifndef DebugLog
+#define DebugLog(fmt, ...) NSLog((@"[%s Line %d]" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#endif
+
+#else
+
+#ifndef DebugLog
+#define DebugLog(fmt, ...)
+#endif
+
+#endif
+/*end*/
+
+#endif /* GLinkPrefix_pch */
