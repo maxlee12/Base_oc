@@ -17,7 +17,6 @@ PODS:
   - JSONModel (1.1.2)
   - libqrencode (3.4.2)
   - Masonry (1.0.1)
-  - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - SDWebImage (3.8.1):
@@ -32,7 +31,6 @@ DEPENDENCIES:
   - JSONModel (~> 1.1.2)
   - libqrencode (~> 3.4.2)
   - Masonry (~> 1.0.1)
-  - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
   - SDWebImage (~> 3.8.1)
@@ -43,12 +41,11 @@ SPEC CHECKSUMS:
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: 557ab7090657251891f4c6477f8162f903b7026b
+PODFILE CHECKSUM: ee0564fbbc058b88c51687cbf0b15f75f4577f60
 
 COCOAPODS: 1.0.1

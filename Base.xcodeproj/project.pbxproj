@@ -43,6 +43,10 @@
 		21065ED41DC1DC4D00E5C57B /* NetworkStatusMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21065EB81DC1DC4D00E5C57B /* NetworkStatusMonitor.m */; };
 		21065ED51DC1DC4D00E5C57B /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21065EBB1DC1DC4D00E5C57B /* QRCodeGenerator.m */; };
 		21065ED61DC1DC4D00E5C57B /* local.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21065EC51DC1DC4D00E5C57B /* local.strings */; };
+		214897E21DC1E2320096B588 /* NetWorkStates.m in Sources */ = {isa = PBXBuildFile; fileRef = 214897E11DC1E2320096B588 /* NetWorkStates.m */; };
+		214897ED1DC1E9340096B588 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 214897E91DC1E9340096B588 /* MBProgressHUD+MJ.m */; };
+		214897EE1DC1E9340096B588 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 214897EA1DC1E9340096B588 /* MBProgressHUD.bundle */; };
+		214897EF1DC1E9340096B588 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 214897EC1DC1E9340096B588 /* MBProgressHUD.m */; };
 		6AD4300F200BD2F41D34DA06 /* libPods-Base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 861B2CF7E518F3360419D333 /* libPods-Base.a */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +145,13 @@
 		21065EC21DC1DC4D00E5C57B /* VendorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendorMacro.h; sourceTree = "<group>"; };
 		21065EC51DC1DC4D00E5C57B /* local.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = local.strings; sourceTree = "<group>"; };
 		214897D01DC1DDBA0096B588 /* BasePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePrefix.pch; sourceTree = "<group>"; };
+		214897E01DC1E2320096B588 /* NetWorkStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkStates.h; sourceTree = "<group>"; };
+		214897E11DC1E2320096B588 /* NetWorkStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkStates.m; sourceTree = "<group>"; };
+		214897E81DC1E9340096B588 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		214897E91DC1E9340096B588 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		214897EA1DC1E9340096B588 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		214897EB1DC1E9340096B588 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		214897EC1DC1E9340096B588 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2BA43CCD4390998A038654FB /* Pods-Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.release.xcconfig"; path = "Pods/Target Support Files/Pods-Base/Pods-Base.release.xcconfig"; sourceTree = "<group>"; };
 		861B2CF7E518F3360419D333 /* libPods-Base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD221AF22FF1C70AC8692BC4 /* Pods-Base.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Base/Pods-Base.debug.xcconfig"; sourceTree = "<group>"; };
@@ -323,6 +334,7 @@
 		21065E931DC1DC4D00E5C57B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				214897DF1DC1E1ED0096B588 /* NetworkStates */,
 				21065E941DC1DC4D00E5C57B /* DateTool */,
 				21065EA81DC1DC4D00E5C57B /* DeviceMsg */,
 				21065EAD1DC1DC4D00E5C57B /* HttpRequestManager */,
@@ -330,7 +342,6 @@
 				21065EB31DC1DC4D00E5C57B /* NetStatus */,
 				21065EB61DC1DC4D00E5C57B /* Network_Monitor */,
 				21065EB91DC1DC4D00E5C57B /* QRCodeDraw */,
-				21065EBC1DC1DC4D00E5C57B /* toast */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -431,13 +442,6 @@
 			path = QRCodeDraw;
 			sourceTree = "<group>";
 		};
-		21065EBC1DC1DC4D00E5C57B /* toast */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = toast;
-			sourceTree = "<group>";
-		};
 		21065EBD1DC1DC4D00E5C57B /* Macro */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,8 +473,30 @@
 		21065EC61DC1DC4D00E5C57B /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				214897E71DC1E9340096B588 /* MBProgressHUD */,
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		214897DF1DC1E1ED0096B588 /* NetworkStates */ = {
+			isa = PBXGroup;
+			children = (
+				214897E01DC1E2320096B588 /* NetWorkStates.h */,
+				214897E11DC1E2320096B588 /* NetWorkStates.m */,
+			);
+			path = NetworkStates;
+			sourceTree = "<group>";
+		};
+		214897E71DC1E9340096B588 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				214897E81DC1E9340096B588 /* MBProgressHUD+MJ.h */,
+				214897E91DC1E9340096B588 /* MBProgressHUD+MJ.m */,
+				214897EA1DC1E9340096B588 /* MBProgressHUD.bundle */,
+				214897EB1DC1E9340096B588 /* MBProgressHUD.h */,
+				214897EC1DC1E9340096B588 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		9ACBEE4A402FC78696FEEC2E /* Frameworks */ = {
@@ -607,6 +633,7 @@
 				21065E431DC1DB5A00E5C57B /* Assets.xcassets in Resources */,
 				21065E411DC1DB5A00E5C57B /* Main.storyboard in Resources */,
 				21065E911DC1DC3200E5C57B /* MainViewController.xib in Resources */,
+				214897EE1DC1E9340096B588 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,10 +710,12 @@
 				21065ECC1DC1DC4D00E5C57B /* DTTimePeriodGroup.m in Sources */,
 				21065ECF1DC1DC4D00E5C57B /* KeyChainStore.m in Sources */,
 				21065ED41DC1DC4D00E5C57B /* NetworkStatusMonitor.m in Sources */,
+				214897EF1DC1E9340096B588 /* MBProgressHUD.m in Sources */,
 				21065E871DC1DC3200E5C57B /* UIButton+Extension.m in Sources */,
 				21065ED21DC1DC4D00E5C57B /* CommonHelper_iOS.mm in Sources */,
 				21065E891DC1DC3200E5C57B /* UIImage+Extension.m in Sources */,
 				21065ECB1DC1DC4D00E5C57B /* DTTimePeriodCollection.m in Sources */,
+				214897E21DC1E2320096B588 /* NetWorkStates.m in Sources */,
 				21065E881DC1DC3200E5C57B /* UIDevice+Extension.m in Sources */,
 				21065E8E1DC1DC3200E5C57B /* BaseTabBarController.m in Sources */,
 				21065EC71DC1DC4D00E5C57B /* DTConstants.m in Sources */,
@@ -698,6 +727,7 @@
 				21065E3B1DC1DB5A00E5C57B /* AppDelegate.m in Sources */,
 				21065E8F1DC1DC3200E5C57B /* BaseViewController.m in Sources */,
 				21065ED51DC1DC4D00E5C57B /* QRCodeGenerator.m in Sources */,
+				214897ED1DC1E9340096B588 /* MBProgressHUD+MJ.m in Sources */,
 				21065ECA1DC1DC4D00E5C57B /* DTTimePeriodChain.m in Sources */,
 				21065E8A1DC1DC3200E5C57B /* UIImageView+Extension.m in Sources */,
 				21065ECE1DC1DC4D00E5C57B /* MyTools.m in Sources */,

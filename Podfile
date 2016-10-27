@@ -1,6 +1,5 @@
 target :Base do
     platform :ios, "8.1"
-    pod 'MBProgressHUD', '~> 1.0.0'
     pod 'libqrencode', '~> 3.4.2'
     pod 'JSONModel', '~> 1.1.2'
     pod 'ZXingObjC', '~> 3.1.0'
