@@ -20,6 +20,7 @@
     AFNetworkReachabilityManager *reachability = [AFNetworkReachabilityManager sharedManager];
     [reachability startMonitoring];
 }
+
 -(void)applicationNetworkStatusChanged:(NSNotification*)userinfo{
     NSInteger status = [[[userinfo userInfo]objectForKey:@"AFNetworkingReachabilityNotificationStatusItem"] integerValue];
     switch (status) {
@@ -38,9 +39,11 @@
             return;
     }
 }
+
 -(void)withoutNetwork{
     self.callBackBlock (WithoutNetwork);
 }
+
 -(void)wwanNetwork{
     CTTelephonyNetworkInfo *networkStatus = [[CTTelephonyNetworkInfo alloc]init];
     NSString *currentStatus  = networkStatus.currentRadioAccessTechnology;
@@ -104,9 +107,11 @@
     取运营商名字  Objective.subscriberCellularProvider.carrierName
      */
 }
+
 -(void)wifiNetwork{
     self.callBackBlock (WifiNetwork);
 }
+
 -(void)unknowNetwork{
     self.callBackBlock(UnknowNetwork);
 }

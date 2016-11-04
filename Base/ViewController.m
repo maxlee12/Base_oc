@@ -8,10 +8,10 @@
 
 #import "ViewController.h"
 #import "BaseTabBarController.h"
+#import "KSGuideManager.h"
+#define kScreenBounds [UIScreen mainScreen].bounds
+@interface ViewController ()<KSGuideDelegate>
 
-@interface ViewController ()
-/** 快速登录 */
-@property (nonatomic, weak) UIButton *loginBtn;
 @end
 
 @implementation ViewController
@@ -19,51 +19,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self loginBtn];
+    [self createGuidView];
 }
 
-- (UIButton *)loginBtn
-{
-    if (_loginBtn == nil){
-        
-        UIButton *loginBtn = [[UIButton alloc] init];
-        
-        loginBtn.backgroundColor = [UIColor clearColor];
-        loginBtn.titleColor = BasicColor;
-        loginBtn.title = @"快速登录";
-        loginBtn.layer.borderWidth = 1;
-        loginBtn.layer.borderColor = BasicColor.CGColor;
-        loginBtn.highlightedTitleColor = [UIColor redColor];
-        
-        
-        [loginBtn addTarget:self action:@selector(loginClick)];
-        
-        [self.view addSubview:loginBtn];
-        
-        [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(@40);
-            make.right.equalTo(@-40);
-            make.centerX.mas_equalTo(SCREEN_W * 0.5);
-            make.height.equalTo(@40);
-            make.bottom.equalTo(self.view).offset(-60);
-        }];
-        
-        
-        
-        _loginBtn = loginBtn;
-    }
-    return _loginBtn;
+#pragma mark welcomeView
+-(void)createGuidView{
+    
+    NSMutableArray *paths = [NSMutableArray new];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"jpg"]];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"2" ofType:@"jpg"]];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"3" ofType:@"jpg"]];
+    
+    [[KSGuideManager shareInstance] setDelegate:self];
+    [[KSGuideManager shareInstance] clearMark];
+    [[KSGuideManager shareInstance] showGuideViewWithImages:paths];
 }
 
+- (UIButton *)KSGuidLastPageButton {
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(0, 0, 200, 44)];
+    [button setTitle:@"立即体验" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button.layer setCornerRadius:5];
+    [button.layer setBorderColor:[UIColor grayColor].CGColor];
+    [button.layer setBorderWidth:1.0f];
+    [button setBackgroundColor:[UIColor whiteColor]];
+    [button setCenter:CGPointMake(kScreenBounds.size.width / 2, kScreenBounds.size.height - 100)];
+    return button;
+}
 
-
-- (void)loginClick
-{
+- (void)KSGuidLastPageButtonDidOnClick {
+    
     [MBProgressHUD showMessage:@"登录中..."];
     
     [self jump];
-    
 }
+
 
 /** 登陆成功之后跳转 */
 - (void)jump

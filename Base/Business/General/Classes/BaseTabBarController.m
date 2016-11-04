@@ -9,6 +9,7 @@
 #import "BaseTabBarController.h"
 #import "BaseNavtionController.h"
 #import "MainViewController.h"
+#import "LeftSlideViewController.h"
 @interface BaseTabBarController ()<UITabBarControllerDelegate>
 
 @end
@@ -24,8 +25,12 @@
 
 - (void)setupBasic
 {
+    UIViewController *leftVc = [[MainViewController alloc] init];
+    leftVc.view.backgroundColor = [UIColor lightGrayColor];
+    UIViewController *mainVc = [[MainViewController alloc] init];
+    mainVc.view.backgroundColor = [UIColor cyanColor];
     //首页
-    [self addChildViewController:[[MainViewController alloc] init] notmalimageNamed:@"toolbar_home" selectedImage:@"toolbar_home_sel" title:@"首页"];
+    [self addChildViewController:[[LeftSlideViewController alloc] initWithLeftView:leftVc andMainView:mainVc]notmalimageNamed:@"toolbar_home" selectedImage:@"toolbar_home_sel" title:@"首页"];
     //直播
     [self addChildViewController:[[MainViewController alloc] init] notmalimageNamed:@"toolbar_live" selectedImage:nil title:@"直播"];
     //个人中心

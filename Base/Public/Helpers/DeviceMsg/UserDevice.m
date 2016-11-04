@@ -165,16 +165,6 @@ static UserDevice* userDevice = nil;
  */
 -(NSDictionary *)getDeviceWiFi
 {
-//    CFArrayRef myArray = CNCopySupportedInterfaces();
-//    if (myArray != nil) {
-//        CFDictionaryRef myDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(myArray, 0));
-//        if (myDict != nil) {
-//            NSDictionary *dic = (NSDictionary*)CFBridgingRelease(myDict);
-//            return dic;
-//        }
-//    }
-//    return nil;
-   
     NSArray *ifs = (__bridge_transfer id)CNCopySupportedInterfaces();
     id info = nil;
     for (NSString *ifnam in ifs) {

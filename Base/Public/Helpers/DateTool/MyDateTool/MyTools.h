@@ -56,14 +56,20 @@
 /**
  *  时间戳转换为时间的方法
  *
- *  @param timestamp 时间戳
+ *  @param timestam 时间戳
  *
  *  @return 标准时间字符串 1464326536 ——》 2015-02-03
  */
 + (NSString *)timestampChangesStandarTime:(NSString *)timestam WithFormatter:(NSString *)format;
 
- //时间转换星期
+ /*
+  时间转换星期
+  */
 +(NSString *)timeToweek:(NSString *)time WithFormatter:(NSString *)format;
- //英文转换中文星期
+
+ /*
+  英文转换中文星期
+  */
 +(NSString*)getweek:(NSString*)week;
+
 @end

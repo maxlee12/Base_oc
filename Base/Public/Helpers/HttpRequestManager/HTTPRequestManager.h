@@ -55,7 +55,9 @@ typedef void (^ResultBlock)(BOOL success,id responseObj,NSError * error);
 
 + (HTTPRequestManager *)defaultManager;
 
-//判断store的version是否升级
+/*
+ * 判断store的version是否升级(参数需要修改)
+*/
 -(void)judgeVersionUpdata;
 
 @end

@@ -32,6 +32,13 @@ typedef NS_ENUM(NSInteger, NetworkStatus) {
 };
 
 @interface NetworkStatusMonitor : NSObject
+/**
+ @result  返回网络状态
+ */
 @property(strong)void(^callBackBlock)(NSInteger NetworkStatus);
+
+/**
+ * return 监听返回网络状态
+ */
 +(void)StartWithBlock:(void(^)(NSInteger NetworkStatus))block;
 @end

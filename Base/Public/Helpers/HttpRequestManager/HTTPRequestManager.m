@@ -47,8 +47,8 @@ static NSInteger timeOut = 10.0f;
     return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
-
-- (void)initManager
+#pragma mark 设置基本manager
+- (void)initNormalManager
 {
     manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
@@ -66,7 +66,7 @@ static NSInteger timeOut = 10.0f;
 #pragma mark --example
 -(void)getDetailVersionWithResultBlock:(ResultBlock)resultBlock{
     
-    [self setNormalManager];
+    [self initNormalManager];
     
     NSString *strUrl = @"example_url";
     
@@ -80,7 +80,9 @@ static NSInteger timeOut = 10.0f;
 }
 
 #pragma mark --GET Post Patch Delete Put
-
+/*
+ GET方法
+ */
 -(void)managerGetWithUrl:(NSString*)strUrl  andResultBlock:(ResultBlock)resultBlock{
     
     //如果飞行模式不发送请求
@@ -110,6 +112,9 @@ static NSInteger timeOut = 10.0f;
     
 }
 
+/*
+ POST方法
+ */
 -(void)managerPostWithUrl:(NSString*)strUrl andParmart:(NSDictionary*)parameters andResultBlock:(ResultBlock)resultBlock{
     
     //如果飞行模式不发送请求
@@ -141,6 +146,9 @@ static NSInteger timeOut = 10.0f;
     
 }
 
+/*
+ PATCH方法
+ */
 -(void)managerPATCHwithUrl:(NSString*)strUrl andParmart:(NSDictionary*)parameters andResultBlock:(ResultBlock)resultBlock{
 
     [manager PATCH:strUrl parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -159,6 +167,9 @@ static NSInteger timeOut = 10.0f;
     }];
 }
 
+/*
+ DELETE方法
+ */
 -(void)managerDELETEwithUrl:(NSString*)strUrl andParmart:(NSDictionary*)parameters andResultBlock:(ResultBlock)resultBlock{
     
     //如果飞行模式不发送请求
@@ -186,6 +197,9 @@ static NSInteger timeOut = 10.0f;
     }];
 }
 
+/*
+ PUT方法
+ */
 -(void)managerPUTwithUrl:(NSString*)strUrl andParmart:(NSDictionary*)parameters andResultBlock:(ResultBlock)resultBlock{
     
     //如果飞行模式不发送请求
@@ -216,7 +230,9 @@ static NSInteger timeOut = 10.0f;
 }
 
 #pragma mark--判断网络状态
-//判断网络状态是否为飞行模式
+/*
+ 判断网络状态是否为飞行模式
+*/
 - (BOOL)judgeNoNetwork
 {
     Reachability * wifi = [Reachability reachabilityForLocalWiFi];
@@ -334,13 +350,8 @@ static NSInteger timeOut = 10.0f;
     [POSTTask cancel];
 }
 
-#pragma mark 设置基本manager
--(void)setNormalManager{
-    
-    [self initManager];
-    
-    //token header
-}
+
+
 
 #pragma mark --基本的后台返回数据处理
 -(void)manageNormalReturnDataWithResultBlock:(ResultBlock)resultBlock and:(BOOL)success Msg:(id)responseObj error:(NSError*)error{
@@ -362,7 +373,7 @@ static NSInteger timeOut = 10.0f;
 }
 
 /*
- 处理错误的 resultBlock
+ 处理错误的 resultBlock  处理显示特定的错误码
  */
 -(void)getErrResuleBlock:(ResultBlock)resultBlock andMsg:(NSString*)erMsg error:(NSError*)error{
     

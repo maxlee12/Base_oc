@@ -15,7 +15,10 @@ typedef NS_ENUM(NSUInteger, NetState) {
     NetworkStatesWIFI // WIFI
 };
 @interface NetWorkStates : NSObject
-// 判断网络类型
+
+/*
+ 得到网络类型
+*/
 + (NetState)getNetworkStates;
 
 @end

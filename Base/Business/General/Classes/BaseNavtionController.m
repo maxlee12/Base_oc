@@ -22,7 +22,6 @@
     [bar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }
 
-#warning mark -law-shouldLookLook
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     [self.navigationBar setHidden:NO];
@@ -41,7 +40,6 @@
 }
 
 
-#warning mark -law-shouldLookLook
 - (void)back
 {
     // 判断两种情况: push 和 present

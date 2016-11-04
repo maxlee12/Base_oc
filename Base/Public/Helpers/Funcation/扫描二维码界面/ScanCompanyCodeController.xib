@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanCompanyCodeController">
+            <connections>
+                <outlet property="actionView" destination="6oH-ZK-3K1" id="cLb-XL-RJL"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Gaf-dD-CCm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oH-ZK-3K1">
+                    <rect key="frame" x="63" y="43" width="249" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILW-EP-But">
+                            <rect key="frame" x="217" y="4" width="32" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="scan_icon_light_off"/>
+                            <connections>
+                                <action selector="ChangeTorchMode:" destination="-1" eventType="touchUpInside" id="MT1-DF-vDe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-zh-Kb4">
+                            <rect key="frame" x="0.0" y="4" width="32" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="btn-back-arraw"/>
+                            <connections>
+                                <action selector="cancaelSanf:" destination="-1" eventType="touchUpInside" id="r8N-Ti-INM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCk-ER-TkF">
+                            <rect key="frame" x="108" y="4" width="32" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="scan_icon_photos"/>
+                            <connections>
+                                <action selector="showImagePicker" destination="-1" eventType="touchUpInside" id="a1K-jz-Wbf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="249" id="A1d-H3-95F"/>
+                        <constraint firstAttribute="height" constant="40" id="xg6-nd-diu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6oH-ZK-3K1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SEo-OQ-Qcd"/>
+                <constraint firstItem="6oH-ZK-3K1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="43" id="qea-SS-v85"/>
+            </constraints>
+            <point key="canvasLocation" x="403.5" y="114.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn-back-arraw" width="8" height="18"/>
+        <image name="scan_icon_light_off" width="27" height="27"/>
+        <image name="scan_icon_photos" width="27" height="27"/>
+    </resources>
+</document>

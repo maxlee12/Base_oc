@@ -25,7 +25,13 @@
 #import <UIKit/UIKit.h>
 
 @interface QRCodeGenerator : NSObject
-
+/*
+ *  @param 扫描所得的字符串
+ *
+ *  @param 生成图片的大小
+ *
+ *  @return 二维码图片
+ */
 + (UIImage *)qrImageForString:(NSString *)string imageSize:(CGFloat)size;
 
 @end
