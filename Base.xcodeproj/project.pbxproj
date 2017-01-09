@@ -47,10 +47,10 @@
 		21233A761DC9E09C000652B1 /* ScanCompanyCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21233A721DC9E09C000652B1 /* ScanCompanyCodeController.m */; };
 		21233A771DC9E09C000652B1 /* ScanCompanyCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21233A731DC9E09C000652B1 /* ScanCompanyCodeController.xib */; };
 		212C21B91DCB207D0091B218 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 212C21B71DCB207D0091B218 /* UIView_extra.m */; };
-		214897E21DC1E2320096B588 /* NetWorkStates.m in Sources */ = {isa = PBXBuildFile; fileRef = 214897E11DC1E2320096B588 /* NetWorkStates.m */; };
 		214897ED1DC1E9340096B588 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 214897E91DC1E9340096B588 /* MBProgressHUD+MJ.m */; };
 		214897EE1DC1E9340096B588 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 214897EA1DC1E9340096B588 /* MBProgressHUD.bundle */; };
 		214897EF1DC1E9340096B588 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 214897EC1DC1E9340096B588 /* MBProgressHUD.m */; };
+		2154D91F1E232CD500363E4D /* NetWorkStates.m in Sources */ = {isa = PBXBuildFile; fileRef = 2154D91E1E232CD500363E4D /* NetWorkStates.m */; };
 		2166C68E1DC9C9D100A35DCC /* ChangeStringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2166C68C1DC9C9D100A35DCC /* ChangeStringView.m */; };
 		2166C68F1DC9C9D100A35DCC /* ChangeStringView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2166C68D1DC9C9D100A35DCC /* ChangeStringView.xib */; };
 		2172412C1DC2EE0300CFEA3D /* CommonHelper_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2172412B1DC2EE0300CFEA3D /* CommonHelper_iOS.mm */; };
@@ -163,13 +163,13 @@
 		212C21B61DCB207D0091B218 /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
 		212C21B71DCB207D0091B218 /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
 		214897D01DC1DDBA0096B588 /* BasePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePrefix.pch; sourceTree = "<group>"; };
-		214897E01DC1E2320096B588 /* NetWorkStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkStates.h; sourceTree = "<group>"; };
-		214897E11DC1E2320096B588 /* NetWorkStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkStates.m; sourceTree = "<group>"; };
 		214897E81DC1E9340096B588 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		214897E91DC1E9340096B588 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		214897EA1DC1E9340096B588 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		214897EB1DC1E9340096B588 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		214897EC1DC1E9340096B588 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2154D91D1E232CD500363E4D /* NetWorkStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkStates.h; sourceTree = "<group>"; };
+		2154D91E1E232CD500363E4D /* NetWorkStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkStates.m; sourceTree = "<group>"; };
 		2166C68B1DC9C9D100A35DCC /* ChangeStringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeStringView.h; sourceTree = "<group>"; };
 		2166C68C1DC9C9D100A35DCC /* ChangeStringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeStringView.m; sourceTree = "<group>"; };
 		2166C68D1DC9C9D100A35DCC /* ChangeStringView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeStringView.xib; sourceTree = "<group>"; };
@@ -367,7 +367,6 @@
 			children = (
 				21233A6B1DC9E09C000652B1 /* Funcation */,
 				217539B61DC990DA00E4800F /* Welcome */,
-				214897DF1DC1E1ED0096B588 /* NetworkStates */,
 				21065E941DC1DC4D00E5C57B /* DateTool */,
 				21065EA81DC1DC4D00E5C57B /* DeviceMsg */,
 				21065EAD1DC1DC4D00E5C57B /* HttpRequestManager */,
@@ -445,6 +444,7 @@
 			children = (
 				21065EB41DC1DC4D00E5C57B /* Reachability.h */,
 				21065EB51DC1DC4D00E5C57B /* Reachability.m */,
+				2154D91C1E232CD500363E4D /* NetworkStates */,
 			);
 			path = NetStatus;
 			sourceTree = "<group>";
@@ -544,15 +544,6 @@
 			path = "侧滑";
 			sourceTree = "<group>";
 		};
-		214897DF1DC1E1ED0096B588 /* NetworkStates */ = {
-			isa = PBXGroup;
-			children = (
-				214897E01DC1E2320096B588 /* NetWorkStates.h */,
-				214897E11DC1E2320096B588 /* NetWorkStates.m */,
-			);
-			path = NetworkStates;
-			sourceTree = "<group>";
-		};
 		214897E71DC1E9340096B588 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +554,15 @@
 				214897EC1DC1E9340096B588 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		2154D91C1E232CD500363E4D /* NetworkStates */ = {
+			isa = PBXGroup;
+			children = (
+				2154D91D1E232CD500363E4D /* NetWorkStates.h */,
+				2154D91E1E232CD500363E4D /* NetWorkStates.m */,
+			);
+			path = NetworkStates;
 			sourceTree = "<group>";
 		};
 		2166C6851DC9C7B000A35DCC /* PublicView */ = {
@@ -816,7 +816,6 @@
 				21065E871DC1DC3200E5C57B /* UIButton+Extension.m in Sources */,
 				21065E891DC1DC3200E5C57B /* UIImage+Extension.m in Sources */,
 				21065ECB1DC1DC4D00E5C57B /* DTTimePeriodCollection.m in Sources */,
-				214897E21DC1E2320096B588 /* NetWorkStates.m in Sources */,
 				212C21B91DCB207D0091B218 /* UIView_extra.m in Sources */,
 				21065E881DC1DC3200E5C57B /* UIDevice+Extension.m in Sources */,
 				21065E8E1DC1DC3200E5C57B /* BaseTabBarController.m in Sources */,
@@ -827,6 +826,7 @@
 				21065EC91DC1DC4D00E5C57B /* DTTimePeriod.m in Sources */,
 				21065E3E1DC1DB5A00E5C57B /* ViewController.m in Sources */,
 				21065E8D1DC1DC3200E5C57B /* BaseNavtionController.m in Sources */,
+				2154D91F1E232CD500363E4D /* NetWorkStates.m in Sources */,
 				21065E3B1DC1DB5A00E5C57B /* AppDelegate.m in Sources */,
 				21065E8F1DC1DC3200E5C57B /* BaseViewController.m in Sources */,
 				21065ED51DC1DC4D00E5C57B /* QRCodeGenerator.m in Sources */,
