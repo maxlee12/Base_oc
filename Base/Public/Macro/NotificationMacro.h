@@ -9,5 +9,9 @@
 #ifndef NotificationMacro_h
 #define NotificationMacro_h
 
+//NSUserDefaults
+#define CurrentUser_key @"CurrentUser_key"
+
+//
 
 #endif /* NotificationMacro_h */

@@ -11,4 +11,7 @@
 
 #define BasicColor LHColor(214, 41, 117)
 
+#define HOST @""
+
+
 #endif /* AppMacro_h */

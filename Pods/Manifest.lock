@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - GoogleAnalytics (3.14.0)
   - JSONModel (1.1.2)
   - libqrencode (3.4.2)
   - Masonry (1.0.1)
@@ -28,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.0-beta.2)
+  - GoogleAnalytics (~> 3.14.0)
   - JSONModel (~> 1.1.2)
   - libqrencode (~> 3.4.2)
   - Masonry (~> 1.0.1)
@@ -38,6 +40,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-PODFILE CHECKSUM: ee0564fbbc058b88c51687cbf0b15f75f4577f60
+PODFILE CHECKSUM: 0dde04b63acbb2378995bcaf9cfbd59c19f90305
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

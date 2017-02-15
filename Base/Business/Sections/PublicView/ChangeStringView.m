@@ -19,7 +19,10 @@
 }
 
 @end
+
+CGFloat KeyBoard_height = 160;
 @implementation ChangeStringView
+
 
 -(void)awakeFromNib{
     
@@ -64,6 +67,7 @@
     
     [nameTF resignFirstResponder];
     [self removeFromSuperview];
+
 }
 
 -(void)clickCertainBtn{
@@ -81,7 +85,7 @@
 
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
-    if ([[textField.text stringByAppendingString:string] length] >200  ) {
+    if ([[textField.text stringByAppendingString:string] length] >30  ) {
         
         return NO;
     };
@@ -93,6 +97,43 @@
     [self clickCertainBtn];
     return YES;
 }
+
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        backView.centerY = self.centerY - KeyBoard_height;
+    }];
+    
+}
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    //滑动效果
+    NSTimeInterval animationDuration = 0.5f;
+    [UIView beginAnimations:@ "ResizeForKeyboard"  context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    
+    //恢复屏幕
+    self.centerX = self.centerX + 100.0f;
+    
+    [UIView commitAnimations];
+}
+
+
+-(void)becomeResponder{
+    //滑动效果（动画）
+    NSTimeInterval animationDuration = 0.5f;
+    [UIView beginAnimations:@ "ResizeForKeyboard"  context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    
+    self.centerX = self.centerX - 100.0f;
+    [UIView commitAnimations];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

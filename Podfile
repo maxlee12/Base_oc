@@ -8,4 +8,5 @@ target :Base do
     pod 'MJExtension', '~> 3.0.13'
     pod 'MJRefresh', '~> 3.1.12'
     pod 'SDWebImage', '~> 3.8.1'
+    pod 'GoogleAnalytics', '~> 3.14.0'
 end
