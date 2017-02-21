@@ -309,11 +309,9 @@
 		21B9A1981E4880E9001E2B31 /* EditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditView.xib; sourceTree = "<group>"; };
 		21B9A19A1E4880FA001E2B31 /* EditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditView.h; sourceTree = "<group>"; };
 		21B9A19B1E4880FA001E2B31 /* EditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditView.m; sourceTree = "<group>"; };
-		2BA43CCD4390998A038654FB /* Pods-Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.release.xcconfig"; path = "Pods/Target Support Files/Pods-Base/Pods-Base.release.xcconfig"; sourceTree = "<group>"; };
 		38B84C4ECE7F750951BE884A /* libPods-XQBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XQBase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C72DC2D0BEC510FBD355E /* Pods-XQBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-XQBase/Pods-XQBase.release.xcconfig"; sourceTree = "<group>"; };
 		861B2CF7E518F3360419D333 /* libPods-Base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD221AF22FF1C70AC8692BC4 /* Pods-Base.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Base/Pods-Base.debug.xcconfig"; sourceTree = "<group>"; };
 		DEAF326E5FAF030319F3EE27 /* Pods-XQBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XQBase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XQBase/Pods-XQBase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -966,8 +964,6 @@
 		E097E3B7A661B2E79B4C55EA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD221AF22FF1C70AC8692BC4 /* Pods-Base.debug.xcconfig */,
-				2BA43CCD4390998A038654FB /* Pods-Base.release.xcconfig */,
 				DEAF326E5FAF030319F3EE27 /* Pods-XQBase.debug.xcconfig */,
 				526C72DC2D0BEC510FBD355E /* Pods-XQBase.release.xcconfig */,
 			);
@@ -1039,7 +1035,7 @@
 		21065E2B1DC1DB5A00E5C57B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "李辉";
 				TargetAttributes = {
 					21065E321DC1DB5A00E5C57B = {
@@ -1335,6 +1331,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1383,6 +1380,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
