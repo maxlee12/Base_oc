@@ -11,7 +11,6 @@
 #import "NetWorkStates.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-#import "GAI.h"
 @interface AppDelegate ()
 
 @property (nonatomic, strong) Reachability *reacha;
@@ -33,18 +32,14 @@
 
 /** GA */
 -(void)registGA{
-    NSString *gaStr = @"";
-    //GA
-    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:gaStr];
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
-    tracker.allowIDFACollection = YES;
+
 }
 
 /** 网络监听 */
 - (void)checkNetworkStates
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:kReachabilityChangedNotification object:nil];
-    _reacha = [Reachability reachabilityWithHostName:@"http://www.baidu.com"];
+    _reacha = [Reachability reachabilityForInternetConnection];
     [_reacha startNotifier];
 }
 

@@ -9,9 +9,20 @@
 #ifndef AppMacro_h
 #define AppMacro_h
 
-#define BasicColor LHColor(214, 41, 117)
+//app相关的宏定义  网络接口
 
-#define HOST @""
+
+
+
+
+//
+//无拼接取出字符串
+#define  INTER_Str(s_key) ([NSString stringWithFormat:NSLocalizedStringFromTable(s_key, @"Localizable",nil)])
+//有拼接取出字符串
+//直接使用 [NSString stringWithFormat:NSLocalizedStringFromTable(@"info_msg_reGetSecond", @"LogAndRegist", nil),拼接值,.....];
+
+//查找中文方法
+//@"[^"]*[\u4E00-\u9FA5]+[^"\n]*?"
 
 
 #endif /* AppMacro_h */

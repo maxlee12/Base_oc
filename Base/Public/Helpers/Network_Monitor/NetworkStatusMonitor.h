@@ -6,6 +6,12 @@
 //  Copyright (c) 2015年 Nickyxu. All rights reserved.
 //
 
+
+
+/**
+ AFNetworking提供的，暂时没有用到
+ */
+
 #import <Foundation/Foundation.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>

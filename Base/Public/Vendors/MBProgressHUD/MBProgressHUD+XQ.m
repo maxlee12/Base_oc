@@ -38,6 +38,38 @@
     return hud;
 }
 
+
+#pragma mark 透明加载圈
++(MBProgressHUD*)showClearHud{
+   
+    MBProgressHUD *hud = [self show];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = [UIColor clearColor];
+    
+    return hud;
+}
+
++(MBProgressHUD*)showClearHudToView:(UIView *)view{
+    MBProgressHUD *hud = [self showToView:view];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = [UIColor clearColor];
+    return hud;
+    
+}
+
++(MBProgressHUD*)showClearHud:(NSTimeInterval)interval{
+    
+    MBProgressHUD *hud = [self showClearHud];
+    [hud hideAnimated:YES afterDelay:interval];
+    return hud;
+}
++(MBProgressHUD*)showClearHudToView:(UIView *)view time:(NSTimeInterval)interval{
+    
+    MBProgressHUD *hud = [self showClearHudToView:view];
+    [hud hideAnimated:YES afterDelay:interval];
+    return hud;
+}
+
 #pragma mark 显示信息
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {

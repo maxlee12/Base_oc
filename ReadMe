@@ -1,0 +1,22 @@
+A、修改项目名  弃用
+/**
+1、使用第一步。更改项目名称 。 打开xcworkspace文件，项目目录中选中工程文件名“XQBase”,enetr键修改名称。下一步弹框中选择ReName.
+2. 项目文件夹中，修改xcworkspace文件名为工程名
+3.修改bundleId等配置
+4.删除钥匙串，entitlements文件 。 打开Capabilities，关闭、打开Keychain Sharing按钮，自动生成另一个钥匙串文件
+5.  修改Podfile中targrt的名字 target :XQBase do
+
+*/
+
+
+
+B、
+导入文件
+1、新建项目。  导入  Public文件夹、Business文件夹、.pch文件 到项目文件夹
+                  .podfie到项目根目录
+
+2、  Bulid Settings中 ，搜索 Prefix header 修改 pch的路径
+
+3、pod install
+
+4、Appdleegate  viewController 看看有没有需要移植的代码

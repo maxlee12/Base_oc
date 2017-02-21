@@ -12,7 +12,8 @@
 
 /**
  *  标准时间字符串转换成时间类型
- *
+ *  
+ *  @
  *  @return 时间类型
  */
 + (NSDate *)getDateWithString:(NSString *)timeStr andFormatter:(NSString *)format

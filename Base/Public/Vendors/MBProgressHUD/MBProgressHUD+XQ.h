@@ -14,7 +14,16 @@
 +(MBProgressHUD*)show;
 +(MBProgressHUD*)showTime:(NSTimeInterval)interval;
 +(MBProgressHUD*)showToView:(UIView *)view;   //推荐
-+(MBProgressHUD*)showToView:(UIView *)view time:(NSTimeInterval)interval;   
++(MBProgressHUD*)showToView:(UIView *)view time:(NSTimeInterval)interval;
+
+
+//透明加载圈
++(MBProgressHUD*)showClearHud;
++(MBProgressHUD*)showClearHudToView:(UIView *)view;
++(MBProgressHUD*)showClearHud:(NSTimeInterval)interval;
++(MBProgressHUD*)showClearHudToView:(UIView *)view time:(NSTimeInterval)interval;
+//
+
 //成功图标 自动消失
 + (void)showSuccess:(NSString *)success;
 + (void)showSuccess:(NSString *)success toView:(UIView *)view;

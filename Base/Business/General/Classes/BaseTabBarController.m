@@ -43,7 +43,7 @@
     childController.tabBarItem.image = [UIImage imageNamed:imageName];
     childController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImageName];
     childController.title = title;
-    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName :BasicColor} forState:UIControlStateNormal];
+    [childController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:BasicColor} forState:UIControlStateNormal];
     
     [self addChildViewController:nav];
 }

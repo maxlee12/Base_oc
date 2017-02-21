@@ -11,7 +11,7 @@
 
 //NSUserDefaults
 #define CurrentUser_key @"CurrentUser_key"
-
+#define HOST @""
 //
 
 #endif /* NotificationMacro_h */
